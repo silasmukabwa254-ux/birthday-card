@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday Rylee Rae Stiles</title>
+    <link rel="stylesheet" href="styles.minimal.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="intro-screen" class="overlay" aria-hidden="false">
+      <div class="intro-frame" role="status" aria-live="polite">
+        <p class="intro-headline">A Special Day...</p>
+        <p class="intro-caption">Celebrating Someone Truly Precious</p>
+      </div>
+    </div>
+
+    <div class="background-layer" id="backgroundLayer"></div>
+    <div class="page-shell hidden" id="pageShell">
+      <main class="content" role="main">
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">Happy Birthday</p>
+            <h1>For Rylee Rae Stiles</h1>
+            <p class="hero-text">On this beautiful day, my heart is full of gratitude for you. Your kindness, your gentle faith, and the quiet strength you carry bring so much light to every life you touch.</p>
+            <p class="hero-text">I thank God for your presence, for the warmth of your smile, and for every moment we share. May this year be filled with peace, hope, and the sweetest blessings.</p>
+            <div class="hero-actions">
+              <button id="openGift" type="button" class="primary-button">Open Your Gift</button>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="card-container" id="giftBox">
+              <div class="card-face card-front" id="giftFront" role="button" tabindex="0" aria-label="Open birthday gift" aria-expanded="false">
+                <div class="gift-lid"></div>
+                <div class="gift-body"></div>
+                <div class="gift-ribbon"></div>
+                <div class="card-label">Tap to open</div>
+              </div>
+
+              <div class="card-face card-back">
+                <div class="card-back-content">
+                  <p class="gift-header">A Gift for Rylee</p>
+                  <p class="gift-back-title">A Special Note</p>
+                  <p class="gift-back-text">Happy Birthday, Rylee Rae. You are treasured, and my heart is grateful for your gentle spirit, your faithful love, and every shared moment.</p>
+                  <button id="viewPhotos" type="button" class="secondary-button">View Photos</button>
+                </div>
+              </div>
+            </div>
+ 
+            <div id="giftModal" class="gift-modal" role="dialog" aria-modal="true" aria-hidden="true" inert>
+              <div class="modal-content">
+                <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+ 
+                <div class="ornament" aria-hidden="true">
+                  <svg viewBox="0 0 64 16" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ornament">
+                    <g fill="none" stroke="none" stroke-width="1" fill-rule="evenodd">
+                      <path d="M6 8c4-5 12-5 16 0 4-5 12-5 16 0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                      <circle cx="32" cy="8" r="1.6" fill="currentColor" />
+                    </g>
+                  </svg>
+                </div>
+
+                <div class="carousel" id="photoCarousel">
+                  <div class="carousel-track" id="carouselTrack">
+                    <div class="carousel-slide" data-caption="Your radiant smile lights every room.">
+                      <img src="FB_IMG_1781970293407.jpg" alt="Rylee photo 1" />
+                    </div>
+                    <div class="carousel-slide" data-caption="A gentle heart full of grace.">
+                      <img src="FB_IMG_1783092228795.jpg" alt="Rylee photo 2" />
+                    </div>
+                    <div class="carousel-slide" data-caption="Quiet strength and timeless beauty.">
+                      <img src="file_00000000ae8871f4acd76be6b0855cb5.png" alt="Rylee photo 3" />
+                    </div>
+                    <div class="carousel-slide" data-caption="Every moment with you is a blessing.">
+                      <img src="IMG_20260603_114337_656.jpg" alt="Rylee photo 4" />
+                    </div>
+                  </div>
+                  <div class="carousel-meta">
+                    <div class="carousel-caption" id="carouselCaption">Your radiant smile lights every room.</div>
+                    <div class="carousel-controls">
+                      <button id="carouselPrev" type="button" class="carousel-control" aria-label="Previous photo">‹</button>
+                      <button id="carouselNext" type="button" class="carousel-control" aria-label="Next photo">›</button>
+                    </div>
+                  </div>
+                  <div class="carousel-dots" id="carouselDots" aria-label="Photo navigation"></div>
+                </div>
+ 
+                <div class="note-large">
+                  <p><strong>Dear Rylee Rae,</strong></p>
+                  <p>On this day I celebrate you — your gentle faith, your kind heart, and the quiet ways you reflect God's love. You are cherished beyond words, and I am so grateful for every moment with you.</p>
+                  <p style="margin-top:12px; font-weight:700;">With all my love, always.</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section letter">
+          <div class="letter-card" id="letterCard">
+            <p class="letter-text">Rylee Rae, may your birthday feel gentle and true. You are cherished in every prayer and celebrated in every grateful heart.</p>
+            <p class="letter-text note">With love that grows stronger every day.</p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <canvas id="confettiCanvas" class="confetti-canvas" aria-hidden="true"></canvas>
+    <script src="script.js"></script>
+  </body>
+</html>
